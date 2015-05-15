@@ -12,15 +12,14 @@
   
   <div ng-app="hinagataApp">
   
-    <div id="greeting"></div>
   
-    <script type="text/ng-template" id="hinagata">
+    <div ng-controller="HinagataController">
       <h3>雛形登録</h3>
       <div>
         <ul>
-          <li>名前<input type="text" value=""/></li>
-          <li>通貨<input type="text" value=""/></li>
-          <li>金額<input type="text" value=""/></li>
+          <li>名前<input type="text" ng-model="name"/></li>
+          <li>通貨<input type="text" ng-model="cur"/></li>
+          <li>金額<input type="text" ng-model="mount"/></li>
         </ul>
       </div>
       <div>
@@ -32,7 +31,7 @@
           <li>金額<input type="text" value=""/></li>
         </ul>
       </div>
-    </script>
+    </div>
     
   </div>
   
