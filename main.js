@@ -19,7 +19,7 @@ module.service('datas', ['$rootScope', function ($scope) {
   $scope.$watch(function () {
     return datas;
   }, function (value) {
-    alert(JSON.stringify(value));
+    alert("change:" + JSON.stringify(value));
     $scope.$broadcast('change:datas', value);
   }, true);
   
@@ -27,5 +27,6 @@ module.service('datas', ['$rootScope', function ($scope) {
 }]);
 
 module.controller('HinagataController', ['$scope', 'datas', function ($scope, datas) {
-  angular.extend($scope, datas.datas[0]);
+  angular.extend($scope, datas);
 }]);
+

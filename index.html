@@ -11,25 +11,25 @@
 <body>
   
   <div ng-app="hinagataApp">
-  
-  
     <div ng-controller="HinagataController">
-      <h3>雛形登録</h3>
-      <div>
-        <ul>
-          <li>名前<input type="text" ng-model="name"/></li>
-          <li>通貨<input type="text" ng-model="cur"/></li>
-          <li>金額<input type="text" ng-model="mount"/></li>
-        </ul>
-      </div>
-      <div>
-        <span>予約</span>
-        <ul>
-          <li>No.<input type="text" value=""/></li>
-          <li>通貨<input type="text" value=""/></li>
-          <li>レート<input type="text" value=""/></li>
-          <li>金額<input type="text" value=""/></li>
-        </ul>
+      <div ng-repeat="data in datas">
+        <h3>雛形登録</h3>
+        <div>
+          <ul>
+            <li>名前<input type="text" ng-model="data.name"/></li>
+            <li>通貨<input type="text" ng-model="data.cur"/></li>
+            <li>金額<input type="text" ng-model="data.mount"/></li>
+          </ul>
+        </div>
+        <div>
+          <span>予約</span>
+          <ul>
+            <li>No.<input type="text" value=""/></li>
+            <li>通貨<input type="text" value=""/></li>
+            <li>レート<input type="text" value=""/></li>
+            <li>金額<input type="text" value=""/></li>
+          </ul>
+        </div>
       </div>
     </div>
     
